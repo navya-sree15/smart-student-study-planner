@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Student Study Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="app">
+
+    <header>
+      <div>
+        <h1>Smart Student Study Planner</h1>
+        <p>Plan smarter. Study better. Track your progress.</p>
+      </div>
+
+      <div class="date" id="today"></div>
+    </header>
+
+    <main>
+
+      <section class="stats">
+
+        <div class="card">
+          <span id="totalTasks">0</span>
+          <small>Total Tasks</small>
+        </div>
+
+        <div class="card">
+          <span id="completedTasks">0</span>
+          <small>Completed</small>
+        </div>
+
+        <div class="card">
+          <span id="pendingTasks">0</span>
+          <small>Pending</small>
+        </div>
+
+        <div class="card">
+          <span id="progress">0%</span>
+          <small>Progress</small>
+        </div>
+
+      </section>
+
+
+      <section class="planner">
+
+        <div class="panel">
+
+          <h2>Add Study Task</h2>
+
+          <form id="taskForm">
+
+            <input
+              id="subject"
+              type="text"
+              placeholder="Subject"
+              required
+            >
+
+            <input
+              id="task"
+              type="text"
+              placeholder="Task / Topic"
+              required
+            >
+
+            <input
+              id="date"
+              type="date"
+              required
+            >
+
+            <select id="priority">
+
+              <option value="High">
+                High Priority
+              </option>
+
+              <option value="Medium" selected>
+                Medium Priority
+              </option>
+
+              <option value="Low">
+                Low Priority
+              </option>
+
+            </select>
+
+            <button type="submit">
+              Add Task
+            </button>
+
+          </form>
+
+        </div>
+
+
+        <div class="panel">
+
+          <div class="task-header">
+
+            <h2>My Study Plan</h2>
+
+            <select id="filter">
+
+              <option value="all">
+                All Tasks
+              </option>
+
+              <option value="pending">
+                Pending
+              </option>
+
+              <option value="completed">
+                Completed
+              </option>
+
+            </select>
+
+          </div>
+
+          <div id="taskList"></div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
